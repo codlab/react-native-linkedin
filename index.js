@@ -149,7 +149,7 @@ export const onLoadStart = async (
   } else {
     const { code, state } = getCodeAndStateFromUrl(url)
     if (!shouldGetAccessToken) {
-      onSuccess(code)
+      onSuccess(code, state)
     } else if (state !== authState) {
       onError({
         type: 'state_not_match',
